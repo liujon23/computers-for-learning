@@ -6,6 +6,9 @@ public class MarbleBehavior : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public float rotateSpeed = 15f;
+
+
+    private float directionAngle = 0f;
     
     private float fbInput;
     private float lrInput;
@@ -15,12 +18,21 @@ public class MarbleBehavior : MonoBehaviour
     void Start()
     {
         //You'll need to add a rigidbody to the marble first
-//        _rb = GetComponent<Rigidbody>();
+        _rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (Input.GetKey(KeyCode.A))
+            _rb.AddForce(new Vector3(0, 0, 1)*moveSpeed);
+        if (Input.GetKey(KeyCode.D))
+            _rb.AddForce(new Vector3(0, 0, -1)*moveSpeed);
+        if (Input.GetKey(KeyCode.W))
+            _rb.AddForce(new Vector3(1, 0, 0)*moveSpeed);
+        if (Input.GetKey(KeyCode.S))
+            _rb.AddForce(new Vector3(-1, 0, 0)*moveSpeed);
         // Put code is for movement using the Sprite's native variables here
     }
     
