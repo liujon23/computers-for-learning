@@ -59,6 +59,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -83,6 +84,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!136 &4400386847080751267
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -118,7 +120,7 @@ Animation:
   m_GameObject: {fileID: 2369037781835957019}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: f8b4bf60bd9e9458e96b603a8f861954, type: 2}
+  m_Animation: {fileID: 7400000, guid: 7c18bdfe83bce4478b57c085bf870ed6, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 7c18bdfe83bce4478b57c085bf870ed6, type: 2}
   - {fileID: 7400000, guid: f8b4bf60bd9e9458e96b603a8f861954, type: 2}
@@ -182,6 +184,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -206,6 +209,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!135 &6521337338547576036
 SphereCollider:
   m_ObjectHideFlags: 0
