@@ -5,15 +5,18 @@ using UnityEngine;
 public class MarbleBehavior : MonoBehaviour
 {
     public float moveSpeed = 10f;
-    public float rotateSpeed = 30f;
+    public float rotateSpeed = 75f;
 
     private float directionAngle = 0f;
 
-    public float jumpHeight = 75f;
+    public float jumpVelocity = 1.3f;
     private bool canJump = true; 
 
     private float fbInput;
     private float lrInput;
+
+    public GameObject blast;
+    public float bulletSpeed = 100f;
     
     private Rigidbody _rb;
     
@@ -41,13 +44,24 @@ public class MarbleBehavior : MonoBehaviour
         //_rb.AddForce(new Vector3(-1, 0, 0)*moveSpeed);
         if (Input.GetKey(KeyCode.Space) && canJump)
             // this.transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
-            _rb.AddForce(Vector3.up * jumpHeight);
+            _rb.AddForce(Vector3.up * jumpVelocity, ForceMode.Impulse);
         // Put code is for movement using the Sprite's native variables here
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            GameObject newBlast = Instantiate(blast,
+                                    this.transform.position,
+                                    this.transform.rotation) as GameObject;
+
+            Rigidbody blastRB = newBlast.GetComponent<Rigidbody>();
+
+            blastRB.velocity = this.transform.forward * bulletSpeed;
+        }
     }
     
     void FixedUpdate()
     {
-        //Put code that moves the sprite using the RigidBody here
+        
     }
 
     //Checks if the player is on ground.
