@@ -55,6 +55,7 @@ public class MarbleBehavior : MonoBehaviour
 
             Rigidbody blastRB = newBlast.GetComponent<Rigidbody>();
 
+            // This breaks when rotation.y is either negative or > 180. Probably a bug with forward?
             blastRB.velocity = this.transform.forward * bulletSpeed;
         }
     }
