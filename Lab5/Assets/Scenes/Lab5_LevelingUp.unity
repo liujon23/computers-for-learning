@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657737, g: 0.49641472, b: 0.5748173, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657785, g: 0.4964152, b: 0.57481855, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -909,8 +909,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e460ad73a38b408b81374084ef9293b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  rotateSpeed: 15
+  moveSpeed: 10
+  rotateSpeed: 30
+  jumpHeight: 75
 --- !u!23 &768545878
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -989,7 +990,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!135 &768545882
 SphereCollider:
   m_ObjectHideFlags: 0

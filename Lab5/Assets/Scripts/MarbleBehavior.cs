@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class MarbleBehavior : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-    public float rotateSpeed = 15f;
-
+    public float moveSpeed = 10f;
+    public float rotateSpeed = 30f;
 
     private float directionAngle = 0f;
-    
+
+    public float jumpHeight = 75f;
+    private bool canJump = true; 
+
     private float fbInput;
     private float lrInput;
     
@@ -36,7 +38,10 @@ public class MarbleBehavior : MonoBehaviour
             //_rb.AddForce(new Vector3(1, 0, 0)*moveSpeed);
         if (Input.GetKey(KeyCode.S))
             this.transform.Translate(Vector3.back*moveSpeed*Time.deltaTime);
-            //_rb.AddForce(new Vector3(-1, 0, 0)*moveSpeed);
+        //_rb.AddForce(new Vector3(-1, 0, 0)*moveSpeed);
+        if (Input.GetKey(KeyCode.Space) && canJump)
+            // this.transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
+            _rb.AddForce(Vector3.up * jumpHeight);
         // Put code is for movement using the Sprite's native variables here
     }
     
@@ -44,5 +49,22 @@ public class MarbleBehavior : MonoBehaviour
     {
         //Put code that moves the sprite using the RigidBody here
     }
-    
+
+    //Checks if the player is on ground.
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name == "Ground")
+        {
+            canJump = true;
+        }
+    }
+
+
+    void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.name == "Ground")
+        {
+            canJump = false;
+        }
+    }
 }
