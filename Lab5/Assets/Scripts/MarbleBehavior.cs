@@ -16,8 +16,8 @@ public class MarbleBehavior : MonoBehaviour
     private float lrInput;
 
     public GameObject blast;
-    public float bulletSpeed = 100f;
-    
+    public float bulletSpeed = 500f;
+    private float bulletBuffer = 1.5f;
     private Rigidbody _rb;
     
     void Start()
@@ -50,13 +50,12 @@ public class MarbleBehavior : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             GameObject newBlast = Instantiate(blast,
-                                    this.transform.position,
+                                    this.transform.position + this.transform.forward * bulletBuffer,
                                     this.transform.rotation) as GameObject;
 
             Rigidbody blastRB = newBlast.GetComponent<Rigidbody>();
 
-            // This breaks when rotation.y is either negative or > 180. Probably a bug with forward?
-            blastRB.velocity = this.transform.forward * bulletSpeed;
+            blastRB.AddForce(this.transform.forward * bulletSpeed);
         }
     }
     
