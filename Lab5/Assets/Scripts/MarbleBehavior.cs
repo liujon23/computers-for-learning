@@ -19,9 +19,12 @@ public class MarbleBehavior : MonoBehaviour
     public float bulletSpeed = 500f;
     private float bulletBuffer = 1.5f;
     private Rigidbody _rb;
-    
+
+    private GameBehavior gameBehavior;
     void Start()
     {
+
+        gameBehavior = GameObject.Find("GameManager").GetComponent<GameBehavior>();
         //You'll need to add a rigidbody to the marble first
         _rb = GetComponent<Rigidbody>();
     }
@@ -70,6 +73,10 @@ public class MarbleBehavior : MonoBehaviour
         if (collision.gameObject.name == "Ground")
         {
             canJump = true;
+        }
+        else if (collision.gameObject.GetComponent<ObstacleBehavior>() != null)
+        {
+            gameBehavior.marbleCollision();
         }
     }
 
