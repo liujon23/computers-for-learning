@@ -33,18 +33,18 @@ public class MarbleBehavior : MonoBehaviour
     void Update()
     {
         Vector3 currVect = new Vector3(Input.GetAxis ("Horizontal"),0, Input.GetAxis ("Vertical"));
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             this.transform.Rotate(Vector3.down*rotateSpeed*Time.deltaTime);
             //_rb.AddForce(new Vector3(0, 0, 1)*moveSpeed);
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
            this.transform.Rotate(Vector3.up*rotateSpeed*Time.deltaTime);
            //_rb.AddForce(new Vector3(0, 0, -1)*moveSpeed);
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
             this.transform.Translate(Vector3.forward*moveSpeed*Time.deltaTime);
             //_rb.AddForce(new Vector3(1, 0, 0)*moveSpeed);
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
             this.transform.Translate(Vector3.back*moveSpeed*Time.deltaTime);
-        //_rb.AddForce(new Vector3(-1, 0, 0)*moveSpeed);
+            //_rb.AddForce(new Vector3(-1, 0, 0)*moveSpeed);
         if (Input.GetKey(KeyCode.Space) && canJump)
             // this.transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
             _rb.AddForce(Vector3.up * jumpVelocity, ForceMode.Impulse);
@@ -74,7 +74,8 @@ public class MarbleBehavior : MonoBehaviour
         {
             canJump = true;
         }
-        else if (collision.gameObject.GetComponent<ObstacleBehavior>() != null)
+        else if (collision.gameObject.tag != "Goal")
+        //else if (collision.gameObject.GetComponent<ObstacleBehavior>() != null)
         {
             gameBehavior.marbleCollision();
         }

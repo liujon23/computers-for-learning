@@ -1,11 +1,9 @@
-﻿
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class OscillateX : MonoBehaviour
 {
-
     public float moveSpeed = 0.1f;
     public float delta = 45f;
     private Vector3 startPos;

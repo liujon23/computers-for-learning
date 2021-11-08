@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ObstacleBehavior : MonoBehaviour
 {
-    public int startingHP = 20;
-    public int blastDamage = 10;
+    public int startingHP = 15;
+    public int blastDamage = 5;
     private int hp;
     
     // Start is called before the first frame update

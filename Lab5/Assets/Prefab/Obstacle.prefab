@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8053739824794529163}
   m_Layer: 0
   m_Name: Obstacle
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,6 +122,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 5926534917857071861}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cd57fe9d9e1e4d4c84c741245ea388c, type: 3}
+  m_Script: {fileID: 11500000, guid: e0ee1111d280347da834db9f142a0144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingHP: 15
+  blastDamage: 5
