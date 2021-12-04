@@ -1,0 +1,35 @@
+﻿<Properties StartupConfiguration="{6CB10A00-C051-2FE2-03C6-036CBD648E1D}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EndpointBehavior.cs">
+    <Files>
+      <File FileName="Assets/Scripts/TrainBehavior.cs" Line="28" Column="31" />
+      <File FileName="Assets/Scripts/ForkBehavior.cs" Line="32" Column="35" />
+      <File FileName="Assets/Scripts/StationBehavior.cs" Line="11" Column="12" />
+      <File FileName="Assets/Scripts/EndpointBehavior.cs" Line="6" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Final Project" expanded="True">
+            <Node name="Assets" expanded="True" />
+            <Node name="Assembly-CSharp" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="Unity" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-Editor PreferredExecutionTarget="e747e84b-49ca-432e-8925-aec82c545a70" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
