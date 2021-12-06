@@ -50,6 +50,7 @@
      <Compile Include="Assets\PathCreator\Examples\Scripts\PathSpawner.cs" />
      <Compile Include="Assets\PathCreator\Examples\Scripts\GeneratePathExample.cs" />
      <Compile Include="Assets\Scripts\EndpointBehavior.cs" />
+     <Compile Include="Assets\Scripts\ButtonBehavior.cs" />
      <Compile Include="Assets\PathCreator\Examples\Scripts\PathPlacer.cs" />
      <Compile Include="Assets\Scripts\ForkBehavior.cs" />
      <Compile Include="Assets\Scripts\TrainBehavior.cs" />
