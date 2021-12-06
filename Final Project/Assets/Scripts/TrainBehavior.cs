@@ -17,6 +17,12 @@ public class TrainBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //i'm trying to figure out a way to make the train not go all the time?
+        //idk if that would be best through initializing the speed to 0, but also 
+        //i think the player needs to see what color the train is before the do the
+        //level. maybe it can go to a gate that doesn't go until the start button is
+        //pressed? i have a StartLevel function in ButtonBehavior that doesn't have 
+        //anything yet
         currentPath = originalPath;
         actualSpeed = currentPath.path.length * speed;
         blueTrain.SetActive(blue);
@@ -52,4 +58,6 @@ public class TrainBehavior : MonoBehaviour
         actualSpeed = currentPath.path.length * speed;
         distanceTraveled = 0;
     }
+
+    
 }

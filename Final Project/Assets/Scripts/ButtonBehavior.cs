@@ -58,4 +58,8 @@ public class ButtonBehavior : MonoBehaviour
         gameplayMenuUI.SetActive(true);
         Time.timeScale = 1f;
     }
+
+    public void StartLevel() {
+        
+    }
 }

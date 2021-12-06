@@ -18,9 +18,17 @@ public class MouseBehavior : MonoBehaviour
                 if (currObj == null) {
                     return;
                 }
+                //tags are easier to deal w than names so i've been adding tags
+                //to our game objects
                 else if (currObj.tag == "Construction") {
-                    // toggle station
-                    Debug.Log("TIME TO BUILD!");
+                    Debug.Log("TIME TO BUILD!"); //this works, other stuff doesnt
+                    StationBehavior sb = currObj.GetComponent<StationBehavior>();
+                    sb.toggleStation(1);
+                    //currObj.toggleStation(1);
+                }
+                else if (currObj.tag == "JunctionStation") {
+                    StationBehavior sb = currObj.GetComponent<StationBehavior>();
+                    sb.toggleStation(2);
                 }
                 else if (currObj.tag == "Train") {
                     Debug.Log("Choo choo!");

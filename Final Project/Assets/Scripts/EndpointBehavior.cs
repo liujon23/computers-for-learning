@@ -12,9 +12,11 @@ public class EndpointBehavior : MonoBehaviour
         if (winCondition) {
             Destroy(tb);
             //update game manager
+            //win screen pops up, reset/quit/level select buttons
         }
         else {
             tb.reset();
+            //lose screen pops up, reset/quit/level select buttonss
 	    }
     }
 }
