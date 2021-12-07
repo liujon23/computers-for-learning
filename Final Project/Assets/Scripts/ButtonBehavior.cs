@@ -12,6 +12,9 @@ public class ButtonBehavior : MonoBehaviour
     public string currentLevel;
     public GameObject startButton;
     public GameBehaviour gameBehavior;
+    public GameObject winScreen;
+    private bool won = false;
+    private float winCounter = 5;
     public void LevelSelect() {
         SceneManager.LoadScene("LevelSelect");
     }
@@ -74,5 +77,18 @@ public class ButtonBehavior : MonoBehaviour
     {
         startButton.SetActive(false);
     }
-
+    public void win() {
+        winScreen.SetActive(true);
+        startButton.SetActive(false);
+        won = true;
+    }
+    private void Update()
+    {
+        if (won) {
+            winCounter -= Time.deltaTime;
+            if(winCounter <= 0) {
+                SceneManager.LoadScene("MainMenu");
+	        }
+	    }
+    }
 }

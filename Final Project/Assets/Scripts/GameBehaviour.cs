@@ -58,9 +58,11 @@ public class GameBehaviour : MonoBehaviour
         if (currentInput >= inputs.Length)
         {
             Debug.Log("You Won!");
-            //TODO you won!
+            buttonBehavior.win();
         }
-        buttonBehavior.unlockStart();
+        else { 
+			buttonBehavior.unlockStart();
+	    }
     }
 
     // Update is called once per frame
