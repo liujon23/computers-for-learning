@@ -21,7 +21,7 @@ public class StationBehavior : MonoBehaviour
         XOR
     }
 
-    public StationType currType;
+    public StationType currType; //Do not initialize on start, gets initialized by us in the editor
 
     //User to distinguish between one bit gates (NOT) and two bit gates, ie if junction
     // is false do not display option to place an AND gate
@@ -33,9 +33,8 @@ public class StationBehavior : MonoBehaviour
 
     private TrainBehavior child;
     private float explosionTimer = 2.0f;
-    
+    public bool locked = true;
     void Start() {
-        currType = StationType.NOTHING;
         updateMesh();
     }
 
@@ -54,23 +53,7 @@ public class StationBehavior : MonoBehaviour
     }
 
     // Call this method to change station type
-    public void changeStationType(int selectStationType) {
-        StationType newType;
-        if (selectStationType == 0) {
-            newType = StationType.NOTHING;
-        }
-        else if (selectStationType == 1) {
-            newType = StationType.NOT;
-        }
-        else if (selectStationType == 2) {
-            newType = StationType.AND;
-        }
-        else if (selectStationType == 3) {
-            newType = StationType.OR;
-        }
-        else { // selectionStationType == 4
-            newType = StationType.XOR;
-        }
+    public void changeStationType(StationType newType) {
         currType = newType;
         stationSelectUI.SetActive(false);
         updateMesh();
@@ -84,12 +67,12 @@ public class StationBehavior : MonoBehaviour
     }
 
 
-    public void toggleStation() {
+    public void toggleStation(bool uiActive) {
         if (junction == false) {
-            stationSelectUI.SetActive(true);
+            stationSelectUI.SetActive(uiActive);
         }
         else { //(junction == true)
-            junctionSelectUI.SetActive(true);
+            junctionSelectUI.SetActive(uiActive);
         }
     }
 
@@ -128,6 +111,7 @@ public class StationBehavior : MonoBehaviour
                 { 
                     TrainBehavior tb = other.GetComponent<TrainBehavior>();
                     tb.toggleColor();
+                    child = tb;
                     return;
                 }
             case StationType.AND: {

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -135,12 +135,12 @@ GameObject:
   - component: {fileID: 24625171}
   - component: {fileID: 24625170}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: StationUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &24625169
 RectTransform:
   m_ObjectHideFlags: 0
@@ -148,20 +148,20 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 24625168}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1217013723}
   - {fileID: 763496169}
   - {fileID: 573957135}
-  m_Father: {fileID: 1411062056}
+  m_Father: {fileID: 467638884}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -450, y: -100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &24625170
 MonoBehaviour:
@@ -311,7 +311,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1222646506}
+      - m_Target: {fileID: 467638888}
         m_TargetAssemblyTypeName: ButtonBehavior, Assembly-CSharp
         m_MethodName: ShowTutorial
         m_Mode: 1
@@ -331,132 +331,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31747072}
   m_CullTransparentMesh: 1
---- !u!1 &51568472
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 51568477}
-  - component: {fileID: 51568476}
-  - component: {fileID: 51568475}
-  - component: {fileID: 51568474}
-  - component: {fileID: 51568473}
-  m_Layer: 5
-  m_Name: 'junctionSelectUI '
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &51568473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 51568472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 929777a1ba1e54846ad87e7564d30a8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stationSelectUI: {fileID: 0}
-  junctionSelectUI: {fileID: 51568472}
-  meshes:
-  - {fileID: 152166195}
-  - {fileID: 1501738473}
-  - {fileID: 1526588090}
-  - {fileID: 152166193}
-  - {fileID: 152166196}
-  currType: 0
-  junction: 0
-  explosion: {fileID: 1790756319}
-  trainPrefab: {fileID: 0}
-  outPath: {fileID: 0}
---- !u!114 &51568474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 51568472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &51568475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 51568472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
---- !u!223 &51568476
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 51568472}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 1
-  m_Camera: {fileID: 1146521742}
-  m_PlaneDistance: 15
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
---- !u!224 &51568477
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 51568472}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 1201115434}
-  m_Father: {fileID: 0}
-  m_RootOrder: 28
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
 --- !u!1 &93018049
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,6 +554,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6407944926799961570, guid: 055236d925b1949c88b1a042a31a5988, type: 3}
+      propertyPath: locked
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6407944926799961570, guid: 055236d925b1949c88b1a042a31a5988, type: 3}
       propertyPath: currType
       value: 0
       objectReference: {fileID: 0}
@@ -690,11 +568,11 @@ PrefabInstance:
     - target: {fileID: 6407944926799961570, guid: 055236d925b1949c88b1a042a31a5988, type: 3}
       propertyPath: stationSelectUI
       value: 
-      objectReference: {fileID: 1411062051}
+      objectReference: {fileID: 24625168}
     - target: {fileID: 6407944926799961570, guid: 055236d925b1949c88b1a042a31a5988, type: 3}
       propertyPath: junctionSelectUI
       value: 
-      objectReference: {fileID: 51568472}
+      objectReference: {fileID: 1201115433}
     - target: {fileID: 6407944926799961597, guid: 055236d925b1949c88b1a042a31a5988, type: 3}
       propertyPath: m_Name
       value: Station0-2
@@ -705,26 +583,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 055236d925b1949c88b1a042a31a5988, type: 3}
---- !u!1 &152166193 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1260412847637869387, guid: 055236d925b1949c88b1a042a31a5988, type: 3}
-  m_PrefabInstance: {fileID: 152166192}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &152166194 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1838218560492637304, guid: 055236d925b1949c88b1a042a31a5988, type: 3}
-  m_PrefabInstance: {fileID: 152166192}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &152166195 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6065502228883774146, guid: 055236d925b1949c88b1a042a31a5988, type: 3}
-  m_PrefabInstance: {fileID: 152166192}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &152166196 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2910395899053534219, guid: 055236d925b1949c88b1a042a31a5988, type: 3}
-  m_PrefabInstance: {fileID: 152166192}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &167039479
 GameObject:
   m_ObjectHideFlags: 0
@@ -1006,7 +864,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1222646506}
+      - m_Target: {fileID: 467638888}
         m_TargetAssemblyTypeName: ButtonBehavior, Assembly-CSharp
         m_MethodName: StartLevel
         m_Mode: 1
@@ -1271,16 +1129,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 51568473}
-        m_TargetAssemblyTypeName: StationBehavior, Assembly-CSharp
-        m_MethodName: changeStationType
-        m_Mode: 3
+      - m_Target: {fileID: 1660080223}
+        m_TargetAssemblyTypeName: MouseBehavior, Assembly-CSharp
+        m_MethodName: stationTypeSelected
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 3
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: OR
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &331488945
@@ -1510,7 +1368,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 779244655}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ButtonBehavior, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
@@ -1530,11 +1388,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 334914625}
   m_CullTransparentMesh: 1
---- !u!1 &387124355 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2680271222624769836, guid: 055236d925b1949c88b1a042a31a5988, type: 3}
-  m_PrefabInstance: {fileID: 1526588089}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &449468191
 GameObject:
   m_ObjectHideFlags: 0
@@ -1614,6 +1467,129 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 449468191}
   m_CullTransparentMesh: 1
+--- !u!1 &467638883
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 467638884}
+  - component: {fileID: 467638887}
+  - component: {fileID: 467638886}
+  - component: {fileID: 467638885}
+  - component: {fileID: 467638888}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &467638884
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467638883}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 24625169}
+  - {fileID: 1935706877}
+  - {fileID: 1999693358}
+  - {fileID: 1971444408}
+  - {fileID: 1201115434}
+  m_Father: {fileID: 1146521743}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &467638885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467638883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &467638886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467638883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &467638887
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467638883}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!114 &467638888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467638883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecd011aebedcd4a7b8fddcaa26b6dd5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 1935706876}
+  gameplayMenuUI: {fileID: 0}
+  tutorialUI: {fileID: 1971444407}
+  currentLevel: LevelN+1
+  startButton: {fileID: 291253664}
+  gameBehavior: {fileID: 1146521744}
 --- !u!1 &539750161
 GameObject:
   m_ObjectHideFlags: 0
@@ -2039,16 +2015,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1411062052}
-        m_TargetAssemblyTypeName: StationBehavior, Assembly-CSharp
-        m_MethodName: changeStationType
-        m_Mode: 3
+      - m_Target: {fileID: 1660080223}
+        m_TargetAssemblyTypeName: MouseBehavior, Assembly-CSharp
+        m_MethodName: stationTypeSelected
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: NOTHING
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &573957137
@@ -2172,7 +2148,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1172726244}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ButtonBehavior, Assembly-CSharp
         m_MethodName: ExitTutorial
         m_Mode: 1
@@ -2384,16 +2360,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1411062052}
-        m_TargetAssemblyTypeName: StationBehavior, Assembly-CSharp
-        m_MethodName: changeStationType
-        m_Mode: 3
+      - m_Target: {fileID: 1660080223}
+        m_TargetAssemblyTypeName: MouseBehavior, Assembly-CSharp
+        m_MethodName: stationTypeSelected
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: NOT
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &763496171
@@ -2434,123 +2410,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 763496168}
   m_CullTransparentMesh: 1
---- !u!1 &779244654
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 779244659}
-  - component: {fileID: 779244658}
-  - component: {fileID: 779244657}
-  - component: {fileID: 779244656}
-  - component: {fileID: 779244655}
-  m_Layer: 5
-  m_Name: Pause Canvas
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &779244655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 779244654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecd011aebedcd4a7b8fddcaa26b6dd5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 779244654}
-  gameplayMenuUI: {fileID: 1222646505}
-  tutorialUI: {fileID: 1172726239}
-  currentLevel: LevelN+1
---- !u!114 &779244656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 779244654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &779244657
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 779244654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
---- !u!223 &779244658
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 779244654}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 1
-  m_Camera: {fileID: 1146521742}
-  m_PlaneDistance: 15
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 2
-  m_TargetDisplay: 0
---- !u!224 &779244659
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 779244654}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 1935706877}
-  m_Father: {fileID: 0}
-  m_RootOrder: 21
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
 --- !u!1 &923768242
 GameObject:
   m_ObjectHideFlags: 0
@@ -2787,6 +2646,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6407944926799961570, guid: 055236d925b1949c88b1a042a31a5988, type: 3}
+      propertyPath: locked
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6407944926799961570, guid: 055236d925b1949c88b1a042a31a5988, type: 3}
       propertyPath: currType
       value: 0
       objectReference: {fileID: 0}
@@ -2797,11 +2660,11 @@ PrefabInstance:
     - target: {fileID: 6407944926799961570, guid: 055236d925b1949c88b1a042a31a5988, type: 3}
       propertyPath: stationSelectUI
       value: 
-      objectReference: {fileID: 1411062051}
+      objectReference: {fileID: 24625168}
     - target: {fileID: 6407944926799961570, guid: 055236d925b1949c88b1a042a31a5988, type: 3}
       propertyPath: junctionSelectUI
       value: 
-      objectReference: {fileID: 51568472}
+      objectReference: {fileID: 1201115433}
     - target: {fileID: 6407944926799961597, guid: 055236d925b1949c88b1a042a31a5988, type: 3}
       propertyPath: m_Name
       value: Station0-1
@@ -2892,7 +2755,8 @@ Transform:
   m_LocalRotation: {x: 0.40557975, y: 0.579228, z: -0.40557975, w: 0.579228}
   m_LocalPosition: {x: -22.41, y: 35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 467638884}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 70, y: 90, z: 0}
@@ -2918,6 +2782,8 @@ MonoBehaviour:
   - 1110
   - 0010
   trainOffset: 0.05
+  buttonBehavior: {fileID: 467638888}
+  resetTimer: 22
 --- !u!1001 &1165229259
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2975,123 +2841,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4df6db115057f41e886b32ca14697bfd, type: 3}
---- !u!1 &1172726239
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1172726243}
-  - component: {fileID: 1172726242}
-  - component: {fileID: 1172726241}
-  - component: {fileID: 1172726240}
-  - component: {fileID: 1172726244}
-  m_Layer: 5
-  m_Name: Tutorial Canvas
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1172726240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1172726239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &1172726241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1172726239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
---- !u!223 &1172726242
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1172726239}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 1
-  m_Camera: {fileID: 1146521742}
-  m_PlaneDistance: 15
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 1
-  m_TargetDisplay: 0
---- !u!224 &1172726243
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1172726239}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 1971444408}
-  m_Father: {fileID: 0}
-  m_RootOrder: 22
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
---- !u!114 &1172726244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1172726239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecd011aebedcd4a7b8fddcaa26b6dd5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 779244654}
-  gameplayMenuUI: {fileID: 1222646505}
-  tutorialUI: {fileID: 1172726239}
-  currentLevel: LevelN+1
 --- !u!1 &1201115433
 GameObject:
   m_ObjectHideFlags: 0
@@ -3104,12 +2853,12 @@ GameObject:
   - component: {fileID: 1201115436}
   - component: {fileID: 1201115435}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: JunctionUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1201115434
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3117,7 +2866,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1201115433}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3126,13 +2875,13 @@ RectTransform:
   - {fileID: 331488943}
   - {fileID: 1523325381}
   - {fileID: 1338574228}
-  m_Father: {fileID: 51568477}
-  m_RootOrder: 0
+  m_Father: {fileID: 467638884}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -450, y: -100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1201115435
 MonoBehaviour:
@@ -3283,10 +3032,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd011aebedcd4a7b8fddcaa26b6dd5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 779244654}
+  pauseMenuUI: {fileID: 0}
   gameplayMenuUI: {fileID: 1222646505}
-  tutorialUI: {fileID: 1172726239}
+  tutorialUI: {fileID: 0}
   currentLevel: LevelN+1
+  startButton: {fileID: 0}
+  gameBehavior: {fileID: 0}
 --- !u!114 &1222646507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3358,8 +3109,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 1999693358}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3530,16 +3280,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 51568473}
-        m_TargetAssemblyTypeName: StationBehavior, Assembly-CSharp
-        m_MethodName: changeStationType
-        m_Mode: 3
+      - m_Target: {fileID: 1660080223}
+        m_TargetAssemblyTypeName: MouseBehavior, Assembly-CSharp
+        m_MethodName: stationTypeSelected
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: NOTHING
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1338574230
@@ -3580,132 +3330,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1338574227}
   m_CullTransparentMesh: 1
---- !u!1 &1411062051
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1411062056}
-  - component: {fileID: 1411062055}
-  - component: {fileID: 1411062054}
-  - component: {fileID: 1411062053}
-  - component: {fileID: 1411062052}
-  m_Layer: 5
-  m_Name: stationSelectUI
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1411062052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1411062051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 929777a1ba1e54846ad87e7564d30a8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stationSelectUI: {fileID: 1411062051}
-  junctionSelectUI: {fileID: 0}
-  meshes:
-  - {fileID: 152166195}
-  - {fileID: 152166194}
-  - {fileID: 1526588090}
-  - {fileID: 152166193}
-  - {fileID: 1501738472}
-  currType: 0
-  junction: 0
-  explosion: {fileID: 387124355}
-  trainPrefab: {fileID: 0}
-  outPath: {fileID: 0}
---- !u!114 &1411062053
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1411062051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &1411062054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1411062051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
---- !u!223 &1411062055
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1411062051}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 1
-  m_Camera: {fileID: 1146521742}
-  m_PlaneDistance: 15
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
---- !u!224 &1411062056
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1411062051}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 24625169}
-  m_Father: {fileID: 0}
-  m_RootOrder: 27
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
 --- !u!1 &1460752216
 GameObject:
   m_ObjectHideFlags: 0
@@ -3851,11 +3475,11 @@ PrefabInstance:
     - target: {fileID: 6407944926799961570, guid: 055236d925b1949c88b1a042a31a5988, type: 3}
       propertyPath: stationSelectUI
       value: 
-      objectReference: {fileID: 1411062051}
+      objectReference: {fileID: 24625168}
     - target: {fileID: 6407944926799961570, guid: 055236d925b1949c88b1a042a31a5988, type: 3}
       propertyPath: junctionSelectUI
       value: 
-      objectReference: {fileID: 51568472}
+      objectReference: {fileID: 1201115433}
     - target: {fileID: 6407944926799961597, guid: 055236d925b1949c88b1a042a31a5988, type: 3}
       propertyPath: m_Name
       value: Station1-1
@@ -3866,16 +3490,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 055236d925b1949c88b1a042a31a5988, type: 3}
---- !u!1 &1501738472 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2910395899053534219, guid: 055236d925b1949c88b1a042a31a5988, type: 3}
-  m_PrefabInstance: {fileID: 1501738471}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1501738473 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1838218560492637304, guid: 055236d925b1949c88b1a042a31a5988, type: 3}
-  m_PrefabInstance: {fileID: 1501738471}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1507260671
 GameObject:
   m_ObjectHideFlags: 0
@@ -4052,16 +3666,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 51568473}
-        m_TargetAssemblyTypeName: StationBehavior, Assembly-CSharp
-        m_MethodName: changeStationType
-        m_Mode: 3
+      - m_Target: {fileID: 1660080223}
+        m_TargetAssemblyTypeName: MouseBehavior, Assembly-CSharp
+        m_MethodName: stationTypeSelected
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 4
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: XOR
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1523325383
@@ -4154,6 +3768,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6407944926799961570, guid: 055236d925b1949c88b1a042a31a5988, type: 3}
+      propertyPath: locked
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6407944926799961570, guid: 055236d925b1949c88b1a042a31a5988, type: 3}
       propertyPath: outPath
       value: 
       objectReference: {fileID: 93018050}
@@ -4168,11 +3786,11 @@ PrefabInstance:
     - target: {fileID: 6407944926799961570, guid: 055236d925b1949c88b1a042a31a5988, type: 3}
       propertyPath: stationSelectUI
       value: 
-      objectReference: {fileID: 1411062051}
+      objectReference: {fileID: 24625168}
     - target: {fileID: 6407944926799961570, guid: 055236d925b1949c88b1a042a31a5988, type: 3}
       propertyPath: junctionSelectUI
       value: 
-      objectReference: {fileID: 51568472}
+      objectReference: {fileID: 1201115433}
     - target: {fileID: 6407944926799961571, guid: 055236d925b1949c88b1a042a31a5988, type: 3}
       propertyPath: m_Size.x
       value: 1.72
@@ -4191,11 +3809,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 055236d925b1949c88b1a042a31a5988, type: 3}
---- !u!1 &1526588090 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2613286345567062168, guid: 055236d925b1949c88b1a042a31a5988, type: 3}
-  m_PrefabInstance: {fileID: 1526588089}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1531523675
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4205,7 +3818,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 3d07eaeb249c5423ea3d25e65754de46, type: 3}
       propertyPath: m_RootOrder
-      value: 26
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3d07eaeb249c5423ea3d25e65754de46, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4523,6 +4136,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4121791130772725432, guid: 355a2039a3b11431abe5ebc5b0b76c5f, type: 3}
+      propertyPath: m_Center.x
+      value: -2.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821126604468142441, guid: 355a2039a3b11431abe5ebc5b0b76c5f, type: 3}
+      propertyPath: gameBehavior
+      value: 
+      objectReference: {fileID: 1146521744}
     - target: {fileID: 7821126604468142441, guid: 355a2039a3b11431abe5ebc5b0b76c5f, type: 3}
       propertyPath: winCondition
       value: 0
@@ -4559,6 +4180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 1146521742}
+  mainMenu: {fileID: 1999693357}
 --- !u!4 &1660080224
 Transform:
   m_ObjectHideFlags: 0
@@ -4744,11 +4366,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1790756319 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2680271222624769836, guid: 055236d925b1949c88b1a042a31a5988, type: 3}
-  m_PrefabInstance: {fileID: 1501738471}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1801145535
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4758,7 +4375,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: f2ab31500f070489d9343c9f506a5b0b, type: 3}
       propertyPath: m_RootOrder
-      value: 25
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f2ab31500f070489d9343c9f506a5b0b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5087,7 +4704,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1222646506}
+      - m_Target: {fileID: 467638888}
         m_TargetAssemblyTypeName: ButtonBehavior, Assembly-CSharp
         m_MethodName: RestartLevel
         m_Mode: 1
@@ -5171,7 +4788,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1833685580
 PrefabInstance:
@@ -5304,11 +4921,11 @@ PrefabInstance:
     - target: {fileID: 6407944926799961570, guid: 055236d925b1949c88b1a042a31a5988, type: 3}
       propertyPath: stationSelectUI
       value: 
-      objectReference: {fileID: 1411062051}
+      objectReference: {fileID: 24625168}
     - target: {fileID: 6407944926799961570, guid: 055236d925b1949c88b1a042a31a5988, type: 3}
       propertyPath: junctionSelectUI
       value: 
-      objectReference: {fileID: 51568472}
+      objectReference: {fileID: 1201115433}
     - target: {fileID: 6407944926799961597, guid: 055236d925b1949c88b1a042a31a5988, type: 3}
       propertyPath: m_Name
       value: Station2-0
@@ -5331,12 +4948,12 @@ GameObject:
   - component: {fileID: 1935706879}
   - component: {fileID: 1935706878}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: PausedPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1935706877
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5351,13 +4968,13 @@ RectTransform:
   - {fileID: 334914626}
   - {fileID: 2051442960}
   - {fileID: 2100048042}
-  m_Father: {fileID: 779244659}
-  m_RootOrder: 0
+  m_Father: {fileID: 467638884}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -100, y: -100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1935706878
 MonoBehaviour:
@@ -5507,7 +5124,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1222646506}
+      - m_Target: {fileID: 467638888}
         m_TargetAssemblyTypeName: ButtonBehavior, Assembly-CSharp
         m_MethodName: PauseGame
         m_Mode: 1
@@ -5539,12 +5156,12 @@ GameObject:
   - component: {fileID: 1971444410}
   - component: {fileID: 1971444409}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Tutorial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1971444408
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5552,19 +5169,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1971444407}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 320639258}
   - {fileID: 615505974}
-  m_Father: {fileID: 1172726243}
-  m_RootOrder: 0
+  m_Father: {fileID: 467638884}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -50, y: -50}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1971444409
 MonoBehaviour:
@@ -5687,16 +5304,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 51568473}
-        m_TargetAssemblyTypeName: StationBehavior, Assembly-CSharp
-        m_MethodName: changeStationType
-        m_Mode: 3
+      - m_Target: {fileID: 1660080223}
+        m_TargetAssemblyTypeName: MouseBehavior, Assembly-CSharp
+        m_MethodName: stationTypeSelected
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: AND
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1990072148
@@ -5749,7 +5366,7 @@ GameObject:
   - component: {fileID: 1999693360}
   - component: {fileID: 1999693359}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: MainMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5770,8 +5387,8 @@ RectTransform:
   - {fileID: 1828980149}
   - {fileID: 31747073}
   - {fileID: 1944820708}
-  m_Father: {fileID: 1222646510}
-  m_RootOrder: 0
+  m_Father: {fileID: 467638884}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -6005,7 +5622,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 779244655}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ButtonBehavior, Assembly-CSharp
         m_MethodName: LevelSelect
         m_Mode: 1
@@ -6080,6 +5697,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4121791130772725432, guid: 355a2039a3b11431abe5ebc5b0b76c5f, type: 3}
+      propertyPath: m_Center.x
+      value: -1.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821126604468142441, guid: 355a2039a3b11431abe5ebc5b0b76c5f, type: 3}
+      propertyPath: gameBehavior
+      value: 
+      objectReference: {fileID: 1146521744}
     - target: {fileID: 7821126604468142441, guid: 355a2039a3b11431abe5ebc5b0b76c5f, type: 3}
       propertyPath: winCondition
       value: 1
@@ -6196,7 +5821,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 779244655}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ButtonBehavior, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1

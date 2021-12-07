@@ -5,6 +5,7 @@ using UnityEngine;
 public class EndpointBehavior : MonoBehaviour
 {
     public bool winCondition = false;
+    public GameBehaviour gameBehavior;
 
     private void OnTriggerExit(Collider other)
     {
@@ -14,14 +15,7 @@ public class EndpointBehavior : MonoBehaviour
         }
 
         TrainBehavior tb = other.GetComponent<TrainBehavior>();
-        if (winCondition) {
-            Destroy(tb);
-            //update game manager
-            //win screen pops up, reset/quit/level select buttons
-        }
-        else {
-            Destroy(tb);
-            //lose screen pops up, reset/quit/level select buttonss
-	    }
+	    Destroy(tb.gameObject);
+        gameBehavior.outputRecieved(winCondition);
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 public class ButtonBehavior : MonoBehaviour
 {
 
@@ -10,7 +10,8 @@ public class ButtonBehavior : MonoBehaviour
     public GameObject gameplayMenuUI;
     public GameObject tutorialUI;
     public string currentLevel;
-
+    public GameObject startButton;
+    public GameBehaviour gameBehavior;
     public void LevelSelect() {
         SceneManager.LoadScene("LevelSelect");
     }
@@ -60,6 +61,18 @@ public class ButtonBehavior : MonoBehaviour
     }
 
     public void StartLevel() {
+        lockStart();
+        gameBehavior.runNextLevel();
         
     }
+
+    public void unlockStart() {
+        startButton.SetActive(true);
+    }
+
+    public void lockStart()
+    {
+        startButton.SetActive(false);
+    }
+
 }

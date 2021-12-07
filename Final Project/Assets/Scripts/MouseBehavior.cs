@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class MouseBehavior : MonoBehaviour
 {
     public Camera mainCamera;
-
+    private StationBehavior selectedStation;
+    public GameObject mainMenu;
     private void Update() {
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit raycastHit)) {
@@ -23,9 +25,11 @@ public class MouseBehavior : MonoBehaviour
                 //tags are easier to deal w than names so i've been adding tags
                 //to our game objects
                 else if (currObj.tag == "Station") {
-                    Debug.Log("TIME TO BUILD!"); 
                     StationBehavior sb = currObj.GetComponent<StationBehavior>();
-                    sb.toggleStation();
+                    if (sb.locked) { return; }
+                    sb.toggleStation(true);
+                    selectedStation = sb;
+                    mainMenu.SetActive(false);
                     //currObj.toggleStation(1);
                 }
                 /*
@@ -41,5 +45,10 @@ public class MouseBehavior : MonoBehaviour
             }
 
         }
+    }
+    public void stationTypeSelected(string selection) {
+        selectedStation.changeStationType((StationBehavior.StationType) Enum.Parse(typeof(StationBehavior.StationType), selection));
+        mainMenu.SetActive(true);
+        selectedStation.toggleStation(false);
     }
 }
