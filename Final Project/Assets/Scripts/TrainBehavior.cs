@@ -13,9 +13,10 @@ public class TrainBehavior : MonoBehaviour
     public GameObject blueTrain;
     public GameObject redTrain;
     public bool blue = true;
+    public bool paused = true;
 
     // Start is called before the first frame update
-    void Start()
+    public void initPrefab(PathCreator op, bool isBlue, float startOffset)
     {
         //i'm trying to figure out a way to make the train not go all the time?
         //idk if that would be best through initializing the speed to 0, but also 
@@ -23,10 +24,21 @@ public class TrainBehavior : MonoBehaviour
         //level. maybe it can go to a gate that doesn't go until the start button is
         //pressed? i have a StartLevel function in ButtonBehavior that doesn't have 
         //anything yet
+
+        blue = isBlue;
+        originalPath = op;
         currentPath = originalPath;
+        distanceTraveled = currentPath.path.length * startOffset;
         actualSpeed = currentPath.path.length * speed;
         blueTrain.SetActive(blue);
         redTrain.SetActive(!blue);
+
+        transform.position = currentPath.path.GetPointAtDistance(distanceTraveled);
+        transform.rotation = currentPath.path.GetRotationAtDistance(distanceTraveled);
+    }
+
+    public void unPause() {
+        paused = false;
     }
 
     public void changePath(PathCreator newPath) {
@@ -46,6 +58,9 @@ public class TrainBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (paused) {
+            return;
+	    }
         distanceTraveled += actualSpeed;
         transform.position = currentPath.path.GetPointAtDistance(distanceTraveled);
         transform.rotation = currentPath.path.GetRotationAtDistance(distanceTraveled);

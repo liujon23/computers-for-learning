@@ -1,0 +1,2 @@
+/Users/david/Documents/UChicago/309/computers-for-learning/Final Project/obj/Debug/PathCreatorEditor.csproj.AssemblyReference.cache
+/Users/david/Documents/UChicago/309/computers-for-learning/Final Project/obj/Debug/PathCreatorEditor.csproj.CoreCompileInputs.cache

@@ -1,20 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class StationBehavior : MonoBehaviour
 {
     public GameObject stationSelectUI; // NOT, construction
     public GameObject junctionStationSelectUI; // AND, OR, XOR
+    public GameObject[] meshes; //Meshes need to be loaded in order of the StationType enum
 
     // Start is called before the first frame update
     public enum StationType
     {
         NOTHING,
-        NOT
+        NOT,
+        AND,
+        OR,
+        XOR
     }
 
     public StationType currType = StationType.NOTHING;
+    //User to distinguish between one bit gates (NOT) and two bit gates
+    public bool junction = false;
     void Start()
     {
         updateMesh();
@@ -22,7 +29,10 @@ public class StationBehavior : MonoBehaviour
     }
 
     void updateMesh() { 
-	    //TODO
+	    foreach(int i in Enum.GetValues(typeof(StationType))){
+            meshes[i].SetActive(false);
+	    }
+        meshes[(int)currType].SetActive(true);
     }
 
 
@@ -47,9 +57,21 @@ public class StationBehavior : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (!other.GetComponent<TrainBehavior>()) {
+            return;
+        }
         switch (currType) {
-            case StationType.NOT:
+            case StationType.NOTHING:
                 {
+                    if (junction)
+                    {
+                        Destroy(other.gameObject);
+                        //TODO trigger explosion animation
+                    }
+                    return;
+                }
+            case StationType.NOT:
+                { 
                     TrainBehavior tb = other.GetComponent<TrainBehavior>();
                     tb.toggleColor();
                     return;
