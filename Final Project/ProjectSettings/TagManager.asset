@@ -7,6 +7,7 @@ TagManager:
   - Construction
   - Station
   - Train
+  - JunctionStation
   layers:
   - Default
   - TransparentFX

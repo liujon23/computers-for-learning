@@ -41,6 +41,21 @@ public class StationBehavior : MonoBehaviour
         updateMesh();
     }
 
+    public void testingFunction(int selectStationType) {
+        if (selectStationType == 0) {
+            StationType newType = StationType.NOTHING;
+            currType = newType;
+            stationSelectUI.SetActive(false);
+            updateMesh();
+        }
+        else if (selectStationType == 1) {
+            StationType newType = StationType.NOT;
+            currType = newType;
+            stationSelectUI.SetActive(false);
+            updateMesh();
+        }
+    }
+
     //i'm trying to make a UI pop up when you click on the station, look
     //at MouseBehavior. having a hard time w calling this from there.
     //the user will select the station they want to put there from the game
