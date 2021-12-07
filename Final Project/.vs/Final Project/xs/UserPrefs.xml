@@ -1,18 +1,22 @@
-﻿<Properties StartupConfiguration="{4ABD25F2-7453-1E14-1C63-BCE00338D1E5}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameBehaviour.cs">
+﻿<Properties>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EndpointBehavior.cs">
     <Files>
-      <File FileName="Assets/Scripts/TrainBehavior.cs" Line="28" Column="31" />
-      <File FileName="Assets/Scripts/ForkBehavior.cs" />
+      <File FileName="Assets/Scripts/TrainBehavior.cs" Line="12" Column="31" />
+      <File FileName="Assets/Scripts/ForkBehavior.cs" Line="11" Column="29" />
       <File FileName="Assets/Scripts/StationBehavior.cs" />
       <File FileName="Assets/Scripts/EndpointBehavior.cs" Line="6" Column="2" />
-      <File FileName="Assets/Scripts/GameBehaviour.cs" Line="6" Column="2" />
+      <File FileName="Assets/Scripts/GameBehaviour.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Final Project" expanded="True">
-            <Node name="Assets" expanded="True" selected="True">
-              <Node name="Scripts" expanded="True" />
+            <Node name="Assembly-CSharp" expanded="True">
+              <Node name="Assets" expanded="True">
+                <Node name="Scripts" expanded="True">
+                  <Node name="EndpointBehavior.cs" selected="True" />
+                </Node>
+              </Node>
             </Node>
           </Node>
         </State>

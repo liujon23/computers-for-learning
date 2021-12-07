@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using PathCreation;
 
 public class StationBehavior : MonoBehaviour
 {
     public GameObject stationSelectUI; // NOT, construction
     public GameObject junctionStationSelectUI; // AND, OR, XOR
     public GameObject[] meshes; //Meshes need to be loaded in order of the StationType enum
-
+    private TrainBehavior otherTrain; //Used in junctions
     // Start is called before the first frame update
     public enum StationType
     {
@@ -20,22 +21,39 @@ public class StationBehavior : MonoBehaviour
     }
 
     public StationType currType = StationType.NOTHING;
-    //User to distinguish between one bit gates (NOT) and two bit gates
+
+    //User to distinguish between one bit gates (NOT) and two bit gates, ie if junction
+    // is false do not display option to place an AND gate
     public bool junction = false;
+    public GameObject explosion;
+
+    public GameObject trainPrefab;
+    public PathCreator outPath;
+
+    private TrainBehavior child;
+    private float explosionTimer = 2.0f;
     void Start()
     {
         updateMesh();
         
     }
 
-    void updateMesh() { 
+    private void Update()
+    {
+        explosionTimer -= Time.deltaTime;
+        if(explosionTimer <= 0) {
+            explosion.SetActive(false);
+        }
+    }
+
+    private void updateMesh() { 
 	    foreach(int i in Enum.GetValues(typeof(StationType))){
             meshes[i].SetActive(false);
 	    }
         meshes[(int)currType].SetActive(true);
     }
 
-
+    // Call this method to change station type
     public void changeStationType(StationType newType) {
         currType = newType;
         updateMesh();
@@ -70,9 +88,21 @@ public class StationBehavior : MonoBehaviour
     }
 
 
+    private TrainBehavior makeNewTrain(bool blue) {
+
+        GameObject newTrain = Instantiate(trainPrefab, Vector3.zero, Quaternion.identity);
+        TrainBehavior tb = newTrain.GetComponent<TrainBehavior>();
+        tb.initPrefab(outPath, blue, 0);
+        tb.unPause();
+        child = tb;
+        return tb;
+
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.GetComponent<TrainBehavior>()) {
+        Debug.Log("Station");
+        if (!other.GetComponent<TrainBehavior>() || other.GetComponent<TrainBehavior>() == child) {
             return;
         }
         switch (currType) {
@@ -81,7 +111,10 @@ public class StationBehavior : MonoBehaviour
                     if (junction)
                     {
                         Destroy(other.gameObject);
-                        //TODO trigger explosion animation
+                        explosion.SetActive(true);
+                        explosionTimer = 2.0f;
+                        //IMPORTANT, If there is an explosion the simulation needs to stop/reset
+                        //because there will be missing trains
                     }
                     return;
                 }
@@ -89,6 +122,49 @@ public class StationBehavior : MonoBehaviour
                 { 
                     TrainBehavior tb = other.GetComponent<TrainBehavior>();
                     tb.toggleColor();
+                    return;
+                }
+            case StationType.AND: {
+                    TrainBehavior tb = other.GetComponent<TrainBehavior>();
+                    if (!otherTrain) {
+                        otherTrain = tb;
+                        otherTrain.pause();
+                        return;
+                    }
+                    makeNewTrain(tb.blue && otherTrain.blue);
+                    Destroy(tb.gameObject);
+                    Destroy(otherTrain.gameObject);
+                    otherTrain = null;
+                    return;
+                }
+            case StationType.OR:
+                {
+                    TrainBehavior tb = other.GetComponent<TrainBehavior>();
+                    if (!otherTrain)
+                    {
+                        otherTrain = tb;
+                        otherTrain.pause();
+                        return;
+                    }
+                    makeNewTrain(tb.blue || otherTrain.blue);
+                    Destroy(tb.gameObject);
+                    Destroy(otherTrain.gameObject);
+                    otherTrain = null;
+                    return;
+                }
+            case StationType.XOR:
+                {
+                    TrainBehavior tb = other.GetComponent<TrainBehavior>();
+                    if (!otherTrain)
+                    {
+                        otherTrain = tb;
+                        otherTrain.pause();
+                        return;
+                    }
+                    makeNewTrain(tb.blue ^ otherTrain.blue);
+                    Destroy(tb.gameObject);
+                    Destroy(otherTrain.gameObject);
+                    otherTrain = null;
                     return;
                 }
             default: {

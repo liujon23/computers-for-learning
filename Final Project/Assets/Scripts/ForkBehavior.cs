@@ -24,6 +24,11 @@ public class ForkBehavior : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (!other.GetComponent<TrainBehavior>())
+        {
+            return;
+        }
+
         TrainBehavior tb = other.GetComponent<TrainBehavior>();
         if (tb.blue) { 
 			tb.changePath(bluePath);

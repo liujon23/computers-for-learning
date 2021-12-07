@@ -8,6 +8,11 @@ public class EndpointBehavior : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        if (!other.GetComponent<TrainBehavior>())
+        {
+            return;
+        }
+
         TrainBehavior tb = other.GetComponent<TrainBehavior>();
         if (winCondition) {
             Destroy(tb);
@@ -15,7 +20,7 @@ public class EndpointBehavior : MonoBehaviour
             //win screen pops up, reset/quit/level select buttons
         }
         else {
-            tb.reset();
+            Destroy(tb);
             //lose screen pops up, reset/quit/level select buttonss
 	    }
     }

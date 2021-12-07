@@ -37,6 +37,10 @@ public class TrainBehavior : MonoBehaviour
         transform.rotation = currentPath.path.GetRotationAtDistance(distanceTraveled);
     }
 
+    public void pause() {
+        paused = true;
+    }
+
     public void unPause() {
         paused = false;
     }

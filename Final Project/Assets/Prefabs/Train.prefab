@@ -47,10 +47,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   originalPath: {fileID: 0}
-  speed: 0.005
+  speed: 0.002
   blueTrain: {fileID: 8411101897986834120}
   redTrain: {fileID: 8411101898540692696}
   blue: 1
+  paused: 1
 --- !u!65 &8681626497803007388
 BoxCollider:
   m_ObjectHideFlags: 0
