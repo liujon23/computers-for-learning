@@ -25,14 +25,15 @@ public class MouseBehavior : MonoBehaviour
                 else if (currObj.tag == "Station") {
                     Debug.Log("TIME TO BUILD!"); 
                     StationBehavior sb = currObj.GetComponent<StationBehavior>();
-                    sb.toggleStation(1);
+                    sb.toggleStation();
                     //currObj.toggleStation(1);
                 }
+                /*
                 else if (currObj.tag == "JunctionStation") {
                     Debug.Log("TIME TO BUILD!"); 
                     StationBehavior sb = currObj.GetComponent<StationBehavior>();
                     sb.toggleStation(2);
-                }
+                }*/
                 else if (currObj.tag == "Train") {
                     Debug.Log("Choo choo!");
                 }

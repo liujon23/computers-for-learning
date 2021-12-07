@@ -7,9 +7,10 @@ using PathCreation;
 public class StationBehavior : MonoBehaviour
 {
     public GameObject stationSelectUI; // NOT, construction
-    public GameObject junctionStationSelectUI; // AND, OR, XOR
+    public GameObject junctionSelectUI; // AND, OR, XOR
     public GameObject[] meshes; //Meshes need to be loaded in order of the StationType enum
     private TrainBehavior otherTrain; //Used in junctions
+    
     // Start is called before the first frame update
     public enum StationType
     {
@@ -20,7 +21,7 @@ public class StationBehavior : MonoBehaviour
         XOR
     }
 
-    public StationType currType = StationType.NOTHING;
+    public StationType currType;
 
     //User to distinguish between one bit gates (NOT) and two bit gates, ie if junction
     // is false do not display option to place an AND gate
@@ -32,14 +33,13 @@ public class StationBehavior : MonoBehaviour
 
     private TrainBehavior child;
     private float explosionTimer = 2.0f;
-    void Start()
-    {
+    
+    void Start() {
+        currType = StationType.NOTHING;
         updateMesh();
-        
     }
 
-    private void Update()
-    {
+    private void Update() {
         explosionTimer -= Time.deltaTime;
         if(explosionTimer <= 0) {
             explosion.SetActive(false);
@@ -54,54 +54,60 @@ public class StationBehavior : MonoBehaviour
     }
 
     // Call this method to change station type
-    public void changeStationType(StationType newType) {
-        currType = newType;
-        updateMesh();
-    }
-
-    public void testingFunction(int selectStationType) {
+    public void changeStationType(int selectStationType) {
+        StationType newType;
         if (selectStationType == 0) {
-            StationType newType = StationType.NOTHING;
-            currType = newType;
-            stationSelectUI.SetActive(false);
-            updateMesh();
+            newType = StationType.NOTHING;
         }
         else if (selectStationType == 1) {
-            StationType newType = StationType.NOT;
-            currType = newType;
-            stationSelectUI.SetActive(false);
-            updateMesh();
+            newType = StationType.NOT;
         }
+        else if (selectStationType == 2) {
+            newType = StationType.AND;
+        }
+        else if (selectStationType == 3) {
+            newType = StationType.OR;
+        }
+        else { // selectionStationType == 4
+            newType = StationType.XOR;
+        }
+        currType = newType;
+        stationSelectUI.SetActive(false);
+        updateMesh();
+        Debug.Log("End of changeStationType: "+currType);
+        /* okay SO in this function currType is what it is changed to
+        in the UI (ie in level1 when I switch the construction to a NOT
+        gate) but once the train goes through it / this function ends 
+        the currtype reverts??? look at the debugs during level 1 idk how
+        to fix it sorry
+        */
     }
 
-    //i'm trying to make a UI pop up when you click on the station, look
-    //at MouseBehavior. having a hard time w calling this from there.
-    //the user will select the station they want to put there from the game
-    //and that will call changeStationType w different inputs depending
-    public void toggleStation(int UItype) {
-        if (UItype == 1) {
+
+    public void toggleStation() {
+        if (junction == false) {
             stationSelectUI.SetActive(true);
         }
-        else if (UItype == 2) {
-            junctionStationSelectUI.SetActive(true);
+        else { //(junction == true)
+            junctionSelectUI.SetActive(true);
         }
     }
 
 
     private TrainBehavior makeNewTrain(bool blue) {
-
         GameObject newTrain = Instantiate(trainPrefab, Vector3.zero, Quaternion.identity);
         TrainBehavior tb = newTrain.GetComponent<TrainBehavior>();
         tb.initPrefab(outPath, blue, 0);
         tb.unPause();
         child = tb;
         return tb;
-
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Station");
+        Debug.Log("OnTriggerEnter1: "+currType);
+        Debug.Log("Going through Station");
+        Debug.Log("OnTriggerEnter2: "+currType);
         if (!other.GetComponent<TrainBehavior>() || other.GetComponent<TrainBehavior>() == child) {
             return;
         }

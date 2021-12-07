@@ -66,7 +66,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stationSelectUI: {fileID: 0}
-  junctionStationSelectUI: {fileID: 0}
+  junctionSelectUI: {fileID: 0}
   meshes:
   - {fileID: 6065502228883774146}
   - {fileID: 1838218560492637304}

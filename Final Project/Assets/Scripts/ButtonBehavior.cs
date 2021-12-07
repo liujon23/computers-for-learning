@@ -28,7 +28,7 @@ public class ButtonBehavior : MonoBehaviour
     }
 
     public void LevelnPlusOne() {
-
+        SceneManager.LoadScene("LevelN+1");
     }
 
     public void RestartLevel() {
